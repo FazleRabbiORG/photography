@@ -6,7 +6,7 @@ const OrderListItem = ({order}) => {
     const status = e.target.value;
     console.log("changed");
     console.log("e", e.target.value);
-    fetch("http://localhost:5000/update/" + id, {
+    fetch("https://polar-hollows-69401.herokuapp.com/update/" + id, {
       method: "PATCH",
       headers: { "content-type": "application/json" },
       body: JSON.stringify({ status }),

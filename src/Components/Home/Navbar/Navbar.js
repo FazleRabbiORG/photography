@@ -8,7 +8,7 @@ const Navbar = () => {
   const [admin, setAdmin] = useState([]);
 
   useEffect((loggedInUserEmail) => {
-    fetch("http://localhost:5000/admin")
+    fetch("https://polar-hollows-69401.herokuapp.com/admin")
       .then((res) => res.json())
       .then((data) => setAdmin(data));
   }, [loggedInUserEmail]);

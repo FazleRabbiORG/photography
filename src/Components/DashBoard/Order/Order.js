@@ -16,7 +16,7 @@ const Order = () => {
   };
 
   const processOrder = (paymentId)=>{
-    fetch('http://localhost:5000/newOrder',{
+    fetch('https://polar-hollows-69401.herokuapp.com/newOrder',{
       method:'POST',
       headers:{"content-type":"application/json"},
       body:JSON.stringify({orderInfo,paymentId})

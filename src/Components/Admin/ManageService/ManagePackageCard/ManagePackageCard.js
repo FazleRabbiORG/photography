@@ -4,7 +4,7 @@ const ManagePackageCard = ({info}) => {
     const [deleteItem,setDeleteItem]= useState('')
     const {name,price} = info.data
     const handleDeleteBtn=(id)=>{
-        fetch('http://localhost:5000/delete/'+id)
+        fetch('https://polar-hollows-69401.herokuapp.com/delete/'+id)
         .then(res=>res.json())
         .then(data=>{
             setDeleteItem("d-none")

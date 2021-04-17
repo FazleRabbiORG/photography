@@ -5,7 +5,7 @@ const ManageService = () => {
 
     const [packages, setPackages]=useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('https://polar-hollows-69401.herokuapp.com/service')
         .then(res=>res.json())
         .then(data=>setPackages(data))
     },[])

@@ -26,7 +26,7 @@ const AddService = () => {
 
 
   const onSubmit = (data) => {
-    fetch('http://localhost:5000/addService',{
+    fetch('https://polar-hollows-69401.herokuapp.com/addService',{
       method:'POST',
       headers:{"content-type":"application/json"},
       body:JSON.stringify({data,imageUrl,date:new Date()})
