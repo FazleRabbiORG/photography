@@ -1,24 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { createContext, useState } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Admin from "./Components/Admin/Admin";
+import Dashboard from "./Components/DashBoard/Dashboard";
+import Header from "./Components/Home/Header/Header";
+import Home from "./Components/Home/Home/Home";
+import Login from "./Components/Login/Login";
+import PrivateRoute from "./Components/Login/PrivateRoute";
+
+export const UserContext = createContext("");
 
 function App() {
+const [loggedInUser, setLoggedInUser] = useState({})
+
+console.log(loggedInUser)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContext.Provider value={[loggedInUser,setLoggedInUser]}>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <Home></Home>
+          </Route>
+          <PrivateRoute path="/dashboard">
+            <Dashboard></Dashboard>
+          </PrivateRoute>
+          <PrivateRoute path="/admin">
+            <Admin></Admin>
+          </PrivateRoute>
+          <Route path="/login">
+            <Login></Login>
+          </Route>
+        </Switch>
+      </Router>
+    </UserContext.Provider>
   );
 }
 
