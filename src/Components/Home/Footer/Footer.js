@@ -8,10 +8,10 @@ import {
   faFacebookMessenger,
   faYoutubeSquare,
 } from "@fortawesome/free-brands-svg-icons";
-import "./Footer.css"
+import "./Footer.css";
 const Footer = () => {
   return (
-    <div  className="row w-100 p-5 footer">
+    <div className="row w-100 p-5 footer">
       <div className="col-md-4 p-5 row d-flex align-items-center">
         <img className="img-fluid rounded" src={locationImage} alt="" />
       </div>

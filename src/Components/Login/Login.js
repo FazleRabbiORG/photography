@@ -5,24 +5,21 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import firebaseConfig from "./FirebaseConfig";
 import { UserContext } from "../../App";
-import {
-  Link,
-  useHistory,
-  useLocation,
-} from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
 }
 
-const setUserToken = ()=>{
-    firebase.auth().currentUser.getIdToken(/* forceRefresh */ true)
-    .then(function(idToken) {
-        sessionStorage.setItem('token',idToken)
-      }).catch(function(error) {
-        console.log(error)
-      });
-}
+const setUserToken = () => {
+  firebase
+    .auth()
+    .currentUser.getIdToken(/* forceRefresh */ true)
+    .then(function (idToken) {
+      sessionStorage.setItem("token", idToken);
+    })
+    .catch(function (error) {});
+};
 
 const Login = () => {
   const [loggedInUser, setLoggedInUser] = useContext(UserContext);
@@ -40,20 +37,10 @@ const Login = () => {
       .then((result) => {
         const user = result.user;
         setLoggedInUser(user);
-        console.log(user);
         history.replace(from);
         setUserToken();
       })
-      .catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-      });
+      .catch((error) => {});
   };
 
   return (

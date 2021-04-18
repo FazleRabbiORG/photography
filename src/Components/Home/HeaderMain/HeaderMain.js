@@ -20,7 +20,9 @@ const HeaderMain = () => {
             original design for you that will make your business stand out from
             the crowd and help you wow competitors and customers alike.
           </h6>
-          <button className="btn btn-primary font-weight-bold">SEE PRICING</button>
+          <button className="btn btn-primary font-weight-bold">
+            SEE PRICING
+          </button>
         </div>
       </div>
     </div>

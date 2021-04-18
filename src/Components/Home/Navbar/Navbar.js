@@ -16,12 +16,9 @@ const Navbar = () => {
     [loggedInUserEmail]
   );
 
-  console.log("loffe", loggedInUserEmail);
-  console.log("|admin", admin);
   const adminEmail = admin.find(
     (element) => element.data.email === loggedInUserEmail
   );
-  console.log("adminEmail", adminEmail);
 
   const handleLogoutBtn = () => {
     setLoggedInUser("");
@@ -30,8 +27,10 @@ const Navbar = () => {
   return (
     <div className="container">
       <nav class="navbar navbar-expand-lg navbar-light font-weight-bold">
-        <Link  class="navbar-brand bg-light pt-2 pb-2 pl-4 pr-4 rounded" to="/">
-          L<span className="text-danger">O</span>G<span className="text-danger">O</span> <span className="text-primary">BAKERY</span>
+        <Link class="navbar-brand bg-light pt-2 pb-2 pl-4 pr-4 rounded" to="/">
+          L<span className="text-danger">O</span>G
+          <span className="text-danger">O</span>{" "}
+          <span className="text-primary">BAKERY</span>
         </Link>
         <button
           class="navbar-toggler"

@@ -15,6 +15,8 @@
 ### one of the amazing features is payment gate way with stripe .
 
 
+# Feel free to contact { developer-email - contact.fazle@gmail.com}
+
 
 
 

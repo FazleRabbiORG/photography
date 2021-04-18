@@ -27,16 +27,14 @@ const testimonialInfo = [
   },
 ];
 const TestimonialCardSlider = () => {
-  const [reviews,setReviews] = useState([])
+  const [reviews, setReviews] = useState([]);
   useEffect(() => {
     fetch("https://polar-hollows-69401.herokuapp.com/review")
       .then((res) => res.json())
       .then((data) => {
-        console.log('[data]',data)
-        setReviews(data)
+        setReviews(data);
       });
   }, []);
-console.log(reviews)
   const settings = {
     infinite: true,
     slidesToShow: 1,
@@ -52,19 +50,6 @@ console.log(reviews)
         {reviews.map((info) => (
           <TestimonialCard info={info}></TestimonialCard>
         ))}
-
-        {/* <div>
-            <h3>1</h3>
-          </div>
-          <div>
-            <h3>2</h3>
-          </div>
-          <div>
-            <h3>3</h3>
-          </div>
-          <div>
-            <h3>4</h3>
-          </div> */}
       </Slider>
     </div>
   );

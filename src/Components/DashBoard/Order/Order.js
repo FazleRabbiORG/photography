@@ -11,19 +11,18 @@ const Order = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    // data.status = "pending" 
     setOrderInfo(data);
   };
 
-  const processOrder = (paymentId)=>{
-    fetch('https://polar-hollows-69401.herokuapp.com/newOrder',{
-      method:'POST',
-      headers:{"content-type":"application/json"},
-      body:JSON.stringify({orderInfo,paymentId,status:"pending"})
+  const processOrder = (paymentId) => {
+    fetch("https://polar-hollows-69401.herokuapp.com/newOrder", {
+      method: "POST",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify({ orderInfo, paymentId, status: "pending" }),
     })
-    .then(res=>res.json())
-    .then(data=>console.log(data))
-  }
+      .then((res) => res.json())
+      .then((data) => console.log(data));
+  };
 
   return (
     <div className="admin-bg">

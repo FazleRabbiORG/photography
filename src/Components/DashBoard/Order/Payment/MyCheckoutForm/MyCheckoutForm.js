@@ -1,9 +1,9 @@
-import {CardElement, useStripe, useElements} from '@stripe/react-stripe-js';
-import { useState } from 'react';
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { useState } from "react";
 
-const MyCheckoutForm = ({processOrder}) => {
-    const [paymentError,setPaymentError] = useState("")
-    const [paymentSuccess,setPaymentSuccess] = useState("")
+const MyCheckoutForm = ({ processOrder }) => {
+  const [paymentError, setPaymentError] = useState("");
+  const [paymentSuccess, setPaymentSuccess] = useState("");
   const stripe = useStripe();
   const elements = useElements();
 
@@ -23,18 +23,16 @@ const MyCheckoutForm = ({processOrder}) => {
     const cardElement = elements.getElement(CardElement);
 
     // Use your card Element with other Stripe.js APIs
-    const {error, paymentMethod} = await stripe.createPaymentMethod({
-      type: 'card',
+    const { error, paymentMethod } = await stripe.createPaymentMethod({
+      type: "card",
       card: cardElement,
     });
 
     if (error) {
-      console.log('[error]', error);
-      setPaymentError(error.message)
-      setPaymentSuccess('');
+      setPaymentError(error.message);
+      setPaymentSuccess("");
     } else {
-      console.log('[PaymentMethod]', paymentMethod);
-      setPaymentSuccess(paymentMethod.id)
+      setPaymentSuccess(paymentMethod.id);
       setPaymentError("");
       processOrder(paymentMethod.id);
     }
@@ -42,18 +40,16 @@ const MyCheckoutForm = ({processOrder}) => {
 
   return (
     <div>
-        <form onSubmit={handleSubmit}>
-      <CardElement />
-      <button type="submit" disabled={!stripe}>
-        Pay
-      </button>
-    </form>
-    {
-        paymentError && <h4 className="text-danger"> {paymentError} </h4>
-    }
-    {
-        paymentSuccess && <h4 className="text-success"> Your Payment successfully done </h4>
-    }
+      <form onSubmit={handleSubmit}>
+        <CardElement />
+        <button type="submit" disabled={!stripe}>
+          Pay
+        </button>
+      </form>
+      {paymentError && <h4 className="text-danger"> {paymentError} </h4>}
+      {paymentSuccess && (
+        <h4 className="text-success"> Your Payment successfully done </h4>
+      )}
     </div>
   );
 };

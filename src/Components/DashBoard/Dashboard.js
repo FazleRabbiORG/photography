@@ -11,18 +11,18 @@ const Dashboard = () => {
       <Navbar></Navbar>
       <HashRouter>
         <div className="col-md-3 offset-md-1">
-            <Link class="nav-link m-2 form-control " to="/order">
-              Order
-            </Link> 
-            <Link class="nav-link m-2 form-control" to="/orderList">
-              OrderList
-            </Link>
-            <Link class="nav-link m-2 form-control" to="/review">
-              Review
-            </Link>
+          <Link class="nav-link m-2 form-control " to="/order">
+            Order
+          </Link>
+          <Link class="nav-link m-2 form-control" to="/orderList">
+            OrderList
+          </Link>
+          <Link class="nav-link m-2 form-control" to="/review">
+            Review
+          </Link>
         </div>
         <div className="col-md-8 content">
-          <Route path='/order' component={Order} />
+          <Route path="/order" component={Order} />
           <Route path="/orderList" component={OrderList} />
           <Route path="/review" component={Review} />
         </div>

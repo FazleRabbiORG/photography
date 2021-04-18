@@ -5,7 +5,7 @@ import OrderListItem from "./OrderListItem/OrderListItem";
 
 const OrderList = () => {
   const [orderList, setOrderList] = useState([]);
-  
+
   useEffect(() => {
     fetch("https://polar-hollows-69401.herokuapp.com/orders")
       .then((res) => res.json())
@@ -13,7 +13,7 @@ const OrderList = () => {
   }, []);
 
   console.log(orderList);
-  
+
   return (
     <div className="admin-bg">
       <div className="d-flex justify-content-between">
@@ -27,7 +27,9 @@ const OrderList = () => {
           <th>Pay With</th>
           <th>Status</th>
         </thead>
-        {orderList.map((order) =><OrderListItem order={order}></OrderListItem> )}
+        {orderList.map((order) => (
+          <OrderListItem order={order}></OrderListItem>
+        ))}
       </table>
     </div>
   );

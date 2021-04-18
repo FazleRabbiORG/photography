@@ -6,7 +6,6 @@ import ManageService from "./ManageService/ManageService";
 import OrderList from "./OrderList/OrderList";
 
 const Admin = () => {
-
   return (
     <div>
       <Navbar></Navbar>
