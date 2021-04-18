@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import OrderListCard from './OrderListCard/OrderListCard';
 
 const OrderList = () => {
@@ -10,10 +10,13 @@ const OrderList = () => {
     },[])
 console.log(orderList)
     return (
-        <div className="row">
+        <div className="admin-bg">
+            <h5 className="text-secondary">Order List</h5>
+        <div className="row ">
             {
                 orderList.map(order=><OrderListCard order={order}></OrderListCard>)
             }
+        </div>
         </div>
     );
 };

@@ -11,7 +11,7 @@ const Order = () => {
     formState: { errors },
   } = useForm();
   const onSubmit = (data) => {
-    data.status = "pending" 
+    // data.status = "pending" 
     setOrderInfo(data);
   };
 
@@ -19,16 +19,17 @@ const Order = () => {
     fetch('https://polar-hollows-69401.herokuapp.com/newOrder',{
       method:'POST',
       headers:{"content-type":"application/json"},
-      body:JSON.stringify({orderInfo,paymentId})
+      body:JSON.stringify({orderInfo,paymentId,status:"pending"})
     })
     .then(res=>res.json())
     .then(data=>console.log(data))
   }
 
   return (
-    <div>
+    <div className="admin-bg">
+      <h5 className="text-secondary">New Order</h5>
       {!orderInfo.email ? (
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form className="w-75" onSubmit={handleSubmit(onSubmit)}>
           <input
             className="form-control m-2 "
             {...register("name", { required: true })}
@@ -55,7 +56,7 @@ const Order = () => {
           />
         </form>
       ) : (
-        <div>
+        <div className="w-75 m-5">
           <Payment processOrder={processOrder}></Payment>
         </div>
       )}

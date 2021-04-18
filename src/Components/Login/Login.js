@@ -58,9 +58,8 @@ const Login = () => {
 
   return (
     <div className="mt-5">
-      <Link to="/">home</Link>
       <div className=" bg-light w-25 rounded border mt-5 m-auto p-5">
-        <h3 className=" text-info text-center mb-3">Login</h3>
+        <h3 className=" text-primary text-center mb-3">Login</h3>
         <h3
           onClick={handleGoogleLogin}
           style={{ borderRadius: "20px" }}

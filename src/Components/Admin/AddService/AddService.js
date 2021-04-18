@@ -36,13 +36,12 @@ const AddService = () => {
   };
 console.log(imageUrl)
   return (
-    <div>
-      <div className="d-flex justify-content-between">
+    <div className="admin-bg">
+      <div  className="d-flex justify-content-between ">
         <h4>Add Service</h4>
-        <h5>Admin Name</h5>
       </div>
 
-      <div>
+      <div className="w-75">
         <form onSubmit={handleSubmit(onSubmit)}>
           <input
             className="form-control m-2 "

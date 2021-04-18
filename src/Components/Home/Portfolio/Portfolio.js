@@ -34,18 +34,19 @@ const portfolioInfo = [
 
 const Portfolio = () => {
     return (
-        <section className='row bg-light pt-5 pb-5 w-100'>
-            <div className="col-md-7 offset-md-1 row" >
+        <section className='row bg-light pt-5 pb-5  w-100'>
+            <div className="col-md-4  offset-1 d-flex align-items-center ">
+                <div>
+                <h2 className='text-primary text-dark mb-5 font-weight-bold'> OUR lATEST WORK</h2>
+                <button className="btn btn-primary mb-4 font-weight-bold">View All</button>
+                </div>
+            </div>
+            <div className="col-md-6 ml-5 row" >
                 {
                    portfolioInfo.map(info => <PortfolioCard info={info}></PortfolioCard>) 
                 }
             </div>
-            <div className="col-md-3 d-flex align-items-center ">
-                <div>
-                <h2 className='text-info mb-5'> Our latest work</h2>
-                <button className="btn btn-dark mt-5">View All</button>
-                </div>
-            </div>
+            
         </section>
     );
 };

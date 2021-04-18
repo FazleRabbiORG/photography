@@ -17,8 +17,9 @@ const Review = () => {
     .then(data=>console.log(data))
   };
   return (
-    <div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+    <div className="admin-bg ">
+      <h5 className="text-secondary">Review</h5>
+      <form className="w-75" onSubmit={handleSubmit(onSubmit)}>
           <input
             className="form-control m-2 "
             {...register("name", { required: true })}

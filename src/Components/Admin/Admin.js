@@ -1,6 +1,4 @@
-import React, { useContext } from "react";
 import { HashRouter, Link, Route } from "react-router-dom";
-import { UserContext } from "../../App";
 import Navbar from "../Home/Navbar/Navbar";
 import AddService from "./AddService/AddService";
 import MakeAdmin from "./MakeAdmin/MakeAdmin";
@@ -8,7 +6,6 @@ import ManageService from "./ManageService/ManageService";
 import OrderList from "./OrderList/OrderList";
 
 const Admin = () => {
-  const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
   return (
     <div>
@@ -16,16 +13,16 @@ const Admin = () => {
       <div className="row w-100">
         <HashRouter>
           <div className="col-md-3 offset-md-1">
-            <Link class="nav-link " to="/orderList">
+            <Link class="nav-link m-2 form-control " to="/orderList">
               Order List
             </Link>
-            <Link class="nav-link" to="/addService">
+            <Link class="nav-link m-2 form-control" to="/addService">
               Add Service
             </Link>
-            <Link class="nav-link" to="/makeAdmin">
+            <Link class="nav-link m-2 form-control" to="/makeAdmin">
               Make Admin
             </Link>
-            <Link class="nav-link" to="/manageService">
+            <Link class="nav-link m-2 form-control" to="/manageService">
               Manage Service
             </Link>
           </div>

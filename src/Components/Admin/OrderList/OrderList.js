@@ -15,10 +15,9 @@ const OrderList = () => {
   console.log(orderList);
   
   return (
-    <div>
+    <div className="admin-bg">
       <div className="d-flex justify-content-between">
-        <h4>OrderList</h4>
-        <h5>Admin Name</h5>
+        <h4 className="text-secondary">OrderList</h4>
       </div>
       <table>
         <thead>

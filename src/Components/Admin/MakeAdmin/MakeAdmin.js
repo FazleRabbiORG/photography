@@ -19,12 +19,11 @@ const MakeAdmin = () => {
     .then(result=>console.log(result))
   };
   return (
-    <div>
+    <div className="admin-bg ">
       <div className="d-flex justify-content-between">
         <h4>Make Admin</h4>
-        <h5>Admin Name</h5>
-      </div>
-      <form onSubmit={handleSubmit(onSubmit)}>
+      </div >
+      <form className="w-75" onSubmit={handleSubmit(onSubmit)}>
         <input
           className="form-control m-2 "
           {...register("email", { required: true })}
