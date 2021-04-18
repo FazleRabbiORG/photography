@@ -17,7 +17,7 @@ const PackageCard = ({ info }) => {
         </h3>
         <h3 className="text-danger">$ {price}</h3>
         <h6 className="text-secondary mt-4 mb-4 "> {description}</h6>
-        <Link to="/dashboard">
+        <Link to="/dashboard#/order">
           <button className="btn btn-primary h6"> Order Now</button>
         </Link>
       </div>
