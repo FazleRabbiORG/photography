@@ -4,8 +4,7 @@ import Navbar from "../Navbar/Navbar";
 import "./ContactUs.css";
 const ContactUs = () => {
   return (
-    <div style={{ backgroundColor: "#1e292f" }} class="">
-      <Navbar></Navbar>
+    <div  class="pt-5 pb-5">
       <div  className="d-flex align-items-center justify-content-between mt-3">
       <div style={{borderRadius:'20px'}} className="w-75 p-5 bg-light m-auto ">
         <div class="contact-image">
@@ -49,7 +48,7 @@ const ContactUs = () => {
                 <input
                   type="submit"
                   name="btnSubmit"
-                  class="btnContact"
+                  class="btn btn-danger pl-5 pr-5"
                   value="Send Message"
                 />
               </div>
@@ -68,7 +67,6 @@ const ContactUs = () => {
         </form>
         </div>
       </div>
-      <Footer></Footer>
     </div>
   );
 };

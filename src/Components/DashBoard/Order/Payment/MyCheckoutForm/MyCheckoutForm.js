@@ -41,8 +41,9 @@ const MyCheckoutForm = ({ processOrder }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <CardElement />
-        <button type="submit" disabled={!stripe}>
+        <h4 className="text-secondary">Pay with Card</h4>
+        <CardElement className="form-control mb-3" />
+        <button className="btn btn-danger pl-5 pr-5" type="submit" disabled={!stripe}>
           Pay
         </button>
       </form>

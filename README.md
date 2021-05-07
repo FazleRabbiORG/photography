@@ -3,22 +3,27 @@
  [live site](https://logo-bakery.web.app/).
 
 ## Available Features
+* login system with firebase also front-end hosting
+* Any one can login with firebase
+* implemented private route no one can go to dashboard without log in
+* customer can review and showing home page dynamically 
+* Admin can  add, update and delete any service and showing home page 
+
+
+## Used technology
+* React
+* Node
+* Mongodb
+* express
+* Firebase
+* bootstrap
+* Material UI
 
 
 
-### there are 6 section 
-
-### login system with firebase also front-end hosting
-### private is used
-### pricing table
-### also have admin and dashboard panel .
-### one of the amazing features is payment gate way with stripe .
-
-
-# Feel free to contact { developer-email - contact.fazle@gmail.com}
+ Feel free to contact(developer-email - contact.fazle@gmail.com)
 
 
 
-#pagol
 
 

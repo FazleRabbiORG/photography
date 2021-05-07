@@ -38,7 +38,9 @@ function App() {
               <Footer></Footer>
             </Route>
             <Route path="/contact">
+              <Navbar></Navbar>
               <ContactUs></ContactUs>
+              <Footer></Footer>
             </Route>
             <Route path="/login">
               <Login></Login>
