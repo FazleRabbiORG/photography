@@ -11,7 +11,7 @@ import {
 import "./Footer.css";
 const Footer = () => {
   return (
-    <div className="row w-100 p-5 footer">
+    <div className="d-md-flex w-100 p-5 footer">
       <div className="col-md-4 p-5 row d-flex align-items-center">
         <img className="img-fluid rounded" src={locationImage} alt="" />
       </div>

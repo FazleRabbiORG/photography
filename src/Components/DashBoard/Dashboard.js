@@ -7,26 +7,28 @@ import Review from "./Review/Review";
 
 const Dashboard = () => {
   return (
-    <div className="row w-100">
+    <div style={{backgroundColor:'#1e292f'}} className="">
       <Navbar></Navbar>
+      <div className='d-md-flex'>
       <HashRouter>
-        <div className="col-md-3 offset-md-1">
-          <Link class="nav-link m-2 form-control " to="/order">
+        <div className="col-md-2 mt-5">
+          <Link style={{borderBottom:'1px solid lightGray'}} class="nav-link   text-light  h6 " to="/order">
             Order
           </Link>
-          <Link class="nav-link m-2 form-control" to="/orderList">
+          <Link style={{borderBottom:'1px solid lightGray'}} class="nav-link  text-light  h6 " to="/orderList">
             OrderList
           </Link>
-          <Link class="nav-link m-2 form-control" to="/review">
+          <Link style={{borderBottom:'1px solid lightGray'}} class="nav-link  text-light h6 " to="/review">
             Review
           </Link>
         </div>
-        <div className="col-md-8 content">
+        <div className="col-md-10 content ">
           <Route path="/order" component={Order} />
           <Route path="/orderList" component={OrderList} />
           <Route path="/review" component={Review} />
         </div>
       </HashRouter>
+      </div>
     </div>
   );
 };

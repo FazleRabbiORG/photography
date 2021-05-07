@@ -6,6 +6,7 @@ import { faGoogle } from "@fortawesome/free-brands-svg-icons";
 import firebaseConfig from "./FirebaseConfig";
 import { UserContext } from "../../App";
 import { useHistory, useLocation } from "react-router-dom";
+import Navbar from "../Home/Navbar/Navbar";
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -46,8 +47,11 @@ const Login = () => {
   return (
     <div
       style={{ backgroundColor: "#1e292f", height: "100vh" }}
-      className="d-flex align-items-center"
+      
     >
+      <Navbar></Navbar>
+      <div className="d-flex align-items-center">
+        
       <div className="w-100 p-5">
         <h2 className="text-light text-center mb-5">Login</h2>
         <div className=" bg-light col-md-4  rounded border m-auto ml-3 mr-3 p-5">
@@ -60,6 +64,7 @@ const Login = () => {
             <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
           </h3>
         </div>
+      </div>
       </div>
     </div>
   );
