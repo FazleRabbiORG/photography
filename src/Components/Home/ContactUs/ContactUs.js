@@ -2,7 +2,7 @@ import React from "react";
 import "./ContactUs.css";
 const ContactUs = () => {
   return (
-    <div class="container contact-form p-5 bg-light">
+    <div style={{backgroundColor:'lightGray'}} class="container contact-form p-5">
       <div class="contact-image">
         <img
           src="https://image.ibb.co/kUagtU/rocket_contact.png"

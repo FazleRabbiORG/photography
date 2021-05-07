@@ -34,14 +34,13 @@ const portfolioInfo = [
 
 const Portfolio = () => {
     return (
-        <section className='row bg-light pt-5 pb-5  w-100'>
-            <div className="col-md-4  offset-1 d-flex align-items-center ">
+        <section style={{backgroundColor:'lightGray'}} className=' pt-5 pb-5  w-100'>
+            <div className=" d-flex align-items-center justify-content-center ">
                 <div>
-                <h2 className='text-primary text-dark mb-5 font-weight-bold'> OUR lATEST WORK</h2>
-                <button className="btn btn-primary mb-4 font-weight-bold">View All</button>
+                <h2 className=' text-dark mb-5 font-weight-bold'> Our latest work</h2>
                 </div>
             </div>
-            <div className="col-md-6 ml-5 row" >
+            <div className="ml-5 d-flex" >
                 {
                    portfolioInfo.map(info => <PortfolioCard info={info}></PortfolioCard>) 
                 }

@@ -59,22 +59,42 @@ const Navbar = () => {
                 </Link>
               </li>
             )}
-            {!loggedInUserEmail ? (
+            
+            <li class="nav-item">
+                <Link to="/login">
+                  <h6  class=" h6 mr-4 text-light" >
+                    Pricing
+                  </h6>
+                </Link>
+              </li><li class="nav-item">
+                <Link to="/login">
+                  <h6  class=" h6 mr-4 text-light" >
+                    Portfolio
+                  </h6>
+                </Link>
+              </li><li class="nav-item">
+                <Link to="/login">
+                  <h6  class=" h6 mr-4 text-light" >
+                    Contact us
+                  </h6>
+                </Link>
+              </li>
+              {!loggedInUserEmail ? (
               <li class="nav-item">
                 <Link to="/login">
-                  <button class=" h6 mr-4 btn btn-primary " to="/login">
-                    Login
-                  </button>
+                  <h6  class=" h6 mr-4 text-light" >
+                    My account
+                  </h6>
                 </Link>
               </li>
             ) : (
               <li class="nav-item">
-                <button
+                <Link
                   onClick={handleLogoutBtn}
                   class=" h6 mr-4 btn btn-primary "
                 >
                   Logout
-                </button>
+                </Link>
               </li>
             )}
           </ul>

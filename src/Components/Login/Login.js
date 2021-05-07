@@ -44,16 +44,22 @@ const Login = () => {
   };
 
   return (
-    <div className="mt-5">
-      <div className=" bg-light w-25 rounded border mt-5 m-auto p-5">
-        <h3 className=" text-primary text-center mb-3">Login</h3>
-        <h3
-          onClick={handleGoogleLogin}
-          style={{ borderRadius: "20px" }}
-          className="btn btn-outline-danger  w-100 "
-        >
-          <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
-        </h3>
+    <div
+      style={{ backgroundColor: "#1e292f", height: "100vh" }}
+      className="d-flex align-items-center"
+    >
+      <div className="w-100 p-5">
+        <h2 className="text-light text-center mb-5">Login</h2>
+        <div className=" bg-light col-md-4  rounded border m-auto ml-3 mr-3 p-5">
+          <h3 className=" text-dark text-center mb-3">Login</h3>
+          <h3
+            onClick={handleGoogleLogin}
+            style={{ borderRadius: "20px" }}
+            className="btn btn-outline-danger  w-100 "
+          >
+            <FontAwesomeIcon icon={faGoogle}></FontAwesomeIcon>
+          </h3>
+        </div>
       </div>
     </div>
   );

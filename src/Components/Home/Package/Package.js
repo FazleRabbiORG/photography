@@ -15,10 +15,14 @@ const Package = (props) => {
       });
   }, []);
   return (
-    <div className="row w-75 m-auto">
+    <div style={{backgroundColor:'lightGray'}} className="">
+      <h2 className="font-weight-bold text-center text-dark pt-5">Design Packages</h2>
+      <h6 className="text-center">We have some affordable design packages for your graphic design needs!</h6>
+      <div className="d-md-flex">
       {packages.map((info) => (
         <PackageCard info={info}></PackageCard>
       ))}
+      </div>
     </div>
   );
 };

@@ -1,6 +1,6 @@
-# This is logo Bakery website that build with React App
+# Design Agency website
 
- [Web app live site](https://logo-bakery.web.app/).
+ [live site](https://logo-bakery.web.app/).
 
 ## Available Features
 
