@@ -21,7 +21,7 @@
 
 
 
- Feel free to contact(developer-email - contact.fazle@gmail.com)
+ Feel free to contact(developer-email - fazlerabbi.dev@gmail.com)
 
 
 
