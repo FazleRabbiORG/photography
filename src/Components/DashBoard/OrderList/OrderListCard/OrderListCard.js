@@ -1,6 +1,7 @@
 import React from "react";
 
 const OrderListCard = ({ order }) => {
+  console.log(order)
   return (
     <div className="col-md-4  ">
       <div className="bg-light border m-2 p-4 rounded">

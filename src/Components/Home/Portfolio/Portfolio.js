@@ -1,8 +1,8 @@
 import React from 'react';
-import clean from '../../../images/clean.png'
-import federal from '../../../images/federal.png'
-import funParty from '../../../images/funparty.png'
-import landg from '../../../images/landg.png'
+import bride1 from '../../../images/bride1.jpg'
+import wedding1 from '../../../images/wedding1.jpg'
+import funParty from '../../../images/event2.jpg'
+import landg from '../../../images/beer2.jpg'
 import mop from '../../../images/mop.png'
 import native from '../../../images/native.png'
 import neuc from '../../../images/neuc.png'
@@ -10,10 +10,10 @@ import PortfolioCard from './PortfolioCard/PortfolioCard';
 
 const portfolioInfo = [
     {
-        img:clean
+        img:bride1
     },
     {
-        img:federal
+        img:wedding1
     },
     {
         img:funParty
@@ -22,13 +22,10 @@ const portfolioInfo = [
         img:landg
     },
     {
-        img:native
+        img:bride1
     },
     {
-        img:mop
-    },
-    {
-        img:neuc
+        img:bride1
     }
 ] 
 
@@ -37,10 +34,10 @@ const Portfolio = () => {
         <section style={{backgroundColor:'lightGray'}} className=' pt-5 pb-5  w-100'>
             <div className=" d-flex align-items-center justify-content-center ">
                 <div>
-                <h2 className=' text-dark mb-5 font-weight-bold'> Our latest work</h2>
+                <h2 className=' text-dark mb-5 font-weight-bold'> CREATIVE WORK</h2>
                 </div>
             </div>
-            <div className="ml-5 d-flex" >
+            <div style={{width: "100%"}} className="row ml-1 p-2" >
                 {
                    portfolioInfo.map(info => <PortfolioCard info={info}></PortfolioCard>) 
                 }

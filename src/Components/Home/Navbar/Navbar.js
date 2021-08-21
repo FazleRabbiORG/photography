@@ -28,9 +28,9 @@ const Navbar = () => {
     <div style={{ backgroundColor: "#1e292f" }} className="pl-5 pr-5">
       <nav class="navbar navbar-expand-lg navbar-light font-weight-bold">
         <Link class="navbar-brand bg-light pt-2 pb-2 pl-4 pr-4 rounded" to="/">
-          L<span className="text-danger">O</span>G
-          <span className="text-danger">O</span>{" "}
-          <span className="text-primary">BAKERY</span>
+          PH<span className="text-danger">O</span>T
+          <span className="text-danger">O</span>
+          <span className="text-primary">GRAPHY</span>
         </Link>
         <button
           class="navbar-toggler  bg-light"
@@ -60,8 +60,8 @@ const Navbar = () => {
 
             {adminEmail && (
               <li class="nav-item">
-                <Link class="nav-link h6 mr-4" to="/admin">
-                  Admin
+                <Link  to="/admin">
+                <h6 class=" h6 mr-4 text-light">Admin</h6>
                 </Link>
               </li>
             )}

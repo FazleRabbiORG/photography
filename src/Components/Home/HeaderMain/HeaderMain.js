@@ -16,8 +16,11 @@ const HeaderMain = () => {
         <div className="col-md-5 offset-md-1 d-flex align-items-center">
           <div className="text-light m-2">
             <h1 className="text-light font-weight-bold font-weight-bold">
-              Uplift Your Brand Image <br /> With Brands Design.
+              WE ARE PHOTGRAPHY
             </h1>
+            <h4 className="text-light font-weight-bold font-weight-bold">
+              PHOTGRAPHY WITH STYLE
+            </h4>
             <div className="p-2">
               <h6>
                 {" "}
@@ -97,7 +100,7 @@ const HeaderMain = () => {
             />
           </div>
           <h5 className="w-75 d-flex align-items-center pl-2">
-            100% Custom Design
+            100% Custom Edit
           </h5>
         </div>
         <div
@@ -119,12 +122,10 @@ const HeaderMain = () => {
       </div>
       <div className="text-center text-light p-5 ">
           <img src={award} alt="" />
-          <h2 className="font-weight-bold">Custom Logo Design Agency</h2>
+          <h6 className="font-weight-bold">We are photography</h6>
+          <h2 className="font-weight-bold">The way to took photo are awesome</h2>
           <h6>
-            Brands Design is a leading branding agency specializing in custom
-            logo designs and crafting aesthetic brand identities. We aim at
-            providing our clients with professional yet niche related branding
-            services targeted at turning their audiences into clients.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nam id harum commodi facere ex eos repellat! Adipisci, expedita illo, saepe voluptates sunt, temporibus alias est molestias sit ex dicta perspiciatis!
           </h6>
         </div>
     </div>

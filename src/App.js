@@ -11,6 +11,7 @@ import Portfolio from "./Components/Home/Portfolio/Portfolio";
 import Footer from "./Components/Home/Footer/Footer";
 import Navbar from "./Components/Home/Navbar/Navbar";
 import ContactUs from "./Components/Home/ContactUs/ContactUs";
+import ViewDetails from "./Components/ViewDetails/ViewDetails";
 
 export const UserContext = createContext("");
 
@@ -22,6 +23,9 @@ function App() {
         <Router>
           <Switch>
             <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route exact path="/home">
               <Home></Home>
             </Route>
             <PrivateRoute path="/dashboard">
@@ -43,6 +47,9 @@ function App() {
             </Route>
             <Route path="/login">
               <Login></Login>
+            </Route>
+            <Route path="/viewDetails">
+              <ViewDetails></ViewDetails>
             </Route>
           </Switch>
         </Router>
