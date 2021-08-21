@@ -1,11 +1,11 @@
-const firebaseConfig={
-    apiKey: "AIzaSyAv9XMVdxcub0e72Uvf4AZ5UChhrbxpWWY",
-    authDomain: "logo-bakery.firebaseapp.com",
-    projectId: "logo-bakery",
-    storageBucket: "logo-bakery.appspot.com",
-    messagingSenderId: "632741326472",
-    appId: "1:632741326472:web:687a6da5c94271cc4fb93d"
-  };
+const firebaseConfig = {
+  apiKey: "AIzaSyBcDLXvJ2td5Sui3l6-uGZcAkQCNrEgP6s",
+  authDomain: "photgraphy-by.firebaseapp.com",
+  projectId: "photgraphy-by",
+  storageBucket: "photgraphy-by.appspot.com",
+  messagingSenderId: "214388506072",
+  appId: "1:214388506072:web:9ff81d7c3d52534d3a06ad"
+};
 
 
 export default firebaseConfig;
